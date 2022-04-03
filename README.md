@@ -13,10 +13,15 @@ or
 
     gcc sharedMemory1.c -o sharedMemory1
 	gcc sharedMemory2.c -o sharedMemory2
+    gcc dlSharedMemory.c -o dlSharedMemory
 
 
 Launch:
     
     ./sharedMemory1
     ./sharedMemory2
+    
+Delete shared memory:
+
+    ./dlSharedMemory
     
