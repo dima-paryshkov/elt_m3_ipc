@@ -19,7 +19,7 @@ int main()
 
     if ((key = ftok(pathname, proj_id)) == -1)
     {
-        perror("Can't create key");
+        perror("Error: Can't create key");
         return 1;
     }
 
@@ -27,14 +27,14 @@ int main()
     {
         if (errno != EEXIST)
         {
-            perror("Can't create chared memory");
+            perror("Error: Can't create chared memory");
             return 2;
         }
         else
         {
             if ((shmid = shmget(key, size * sizeof(int), 0)) == -1)
             {
-                perror("Can't find chared memory");
+                perror("Error: Can't find chared memory");
                 return 3;
             }
             new = false;
@@ -43,7 +43,7 @@ int main()
 
     if ((array = (int*)shmat(shmid, NULL, 0)) == (int*)(-1))
     {
-        perror("Can't attach shared memory");
+        perror("Error: Can't attach shared memory");
         return 4;
     }
 
@@ -63,7 +63,7 @@ int main()
 
     if (shmdt((void*)array) == -1)
     {
-        perror("Can't ");
+        perror("Error: Can't detach shared memory");
         return 5;
     }
 
