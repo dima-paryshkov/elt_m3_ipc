@@ -7,16 +7,16 @@ Really important file is sharedMemory. Don't forget about it!
 
 Compile:
 
-    `make sharedMemory`
+    make sharedMemory
 
-    or 
+or 
 
-    `gcc sharedMemory1.c -o sharedMemory1
-	gcc sharedMemory2.c -o sharedMemory2`
+    gcc sharedMemory1.c -o sharedMemory1
+	gcc sharedMemory2.c -o sharedMemory2
 
 
 Launch:
     
-    `./sharedMemory1
-    ./sharedMemory2`
+    ./sharedMemory1
+    ./sharedMemory2
     
