@@ -1,6 +1,6 @@
-#During the development of the project, the means of working with System V IPC
+# During the development of the project, the means of working with System V IPC
 
-##Part 1
+## Part 1
 Was developed two programm for working witn shared memory. First is sharedMemory1.c and second is sharedMemory1.c.
 Really important file is sharedMemory. Don't forget about it!
 
