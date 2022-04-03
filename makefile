@@ -12,3 +12,13 @@ sharedMemory2: sharedMemory2.c
 dlSharedMemory: dlSharedMemory.c
 	gcc dlSharedMemory.c -o dlSharedMemory
 
+shm2: shm2a.c shm2b.c
+	gcc shm2a.c -o shm2a
+	gcc shm2b.c -o shm2b
+
+shm2a: shm2a.c
+	gcc shm2a.c -o shm2a
+
+shm2b: shm2b.c
+	gcc shm2b.c -o shm2b
+

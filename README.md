@@ -2,6 +2,8 @@
 
 #### Part 1 - shared memory
 
+##### Exercise 1
+
 Was developed two programm for working witn shared memory. First is sharedMemory1.c and second is sharedMemory1.c.
 Really important file is sharedMemory. Don't forget about it!
 
@@ -26,4 +28,21 @@ Launch:
 Delete shared memory:
 
     ./dlSharedMemory
+
+##### Exercise 2
+
+Two persistent programs that communicate through shared memory. The first program creates a shared memory segment and copies its own source text there, the second program must take this text, print it on the display and remove the shared memory segment from the system.
+
+Compile:
+
+    make shm2
+
+or 
+
+	gcc shm2a.c -o shm2a
+	gcc shm2b.c -o shm2b
+
+Launch:
     
+    ./shm2a
+    ./shm2b
