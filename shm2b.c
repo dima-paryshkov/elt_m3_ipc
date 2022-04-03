@@ -37,13 +37,13 @@ int main()
     if (shmdt((void *)array) == -1)
     {
         perror("Error: Can't detach shared memory");
-        return 6;
+        return 4;
     }
 
     if (shmctl(shmid, IPC_RMID, NULL) == -1)
     {
         perror("Error: Can't find chared memory");
-        return 3;
+        return 5;
     }
 
     return 0;
