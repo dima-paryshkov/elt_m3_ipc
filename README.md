@@ -46,3 +46,23 @@ Launch:
     
     ./shm2a
     ./shm2b
+
+#### Part 2 - semaphore
+
+##### Exercise 3
+
+Both programs can create semophore if it doesn't exist. Program 1 execute P(0, 1). Program 1 execute A(0, 1). 
+
+Compile:
+
+    make sem1
+
+or 
+
+	gcc sem1a.c -o sem1a
+	gcc sem1b.c -o sem1b
+
+Launch:
+    
+    ./sem1a
+    ./sem1b
