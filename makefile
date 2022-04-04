@@ -36,3 +36,17 @@ sem1b: sem1b.c
 sem1dl: sem1dl.c
 	gcc sem1dl.c -o sem1dl
 
+shmSem1: shmSem1a.c shmSem1b.c shmSem1dl.c
+	gcc shmSem1a.c -o shmSem1a
+	gcc shmSem1b.c -o shmSem1b
+	gcc shmSem1dl.c -o shmSem1dl
+
+shmSem1a: shmSem1a.c
+	gcc shmSem1a.c -o shmSem1a
+
+shmSem1b: shmSem1b.c
+	gcc shmSem1b.c -o shmSem1b
+
+shmSem1dl: shmSem1dl.c
+	gcc shmSem1dl.c -o shmSem1dl
+
