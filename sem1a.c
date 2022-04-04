@@ -47,5 +47,7 @@ int main()
         return 4;
     }
 
+    fprintf(stdout, "Condition is present\n");
+
     return 0;
 }

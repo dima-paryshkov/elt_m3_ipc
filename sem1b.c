@@ -47,5 +47,7 @@ int main()
         return 4;
     }
 
+    fprintf(stdout, "Set condition\n");
+
     return 0;
 }
