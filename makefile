@@ -22,13 +22,17 @@ shm2a: shm2a.c
 shm2b: shm2b.c
 	gcc shm2b.c -o shm2b
 
-sem1: sem1a.c sem1b.c
+sem1: sem1a.c sem1b.c sem1dl.c
 	gcc sem1a.c -o sem1a
 	gcc sem1b.c -o sem1b
+	gcc sem1dl.c -o sem1dl
 
 sem1a: sem1a.c
 	gcc sem1a.c -o sem1a
 
 sem1b: sem1b.c
 	gcc sem1b.c -o sem1b
+
+sem1dl: sem1dl.c
+	gcc sem1dl.c -o sem1dl
 
