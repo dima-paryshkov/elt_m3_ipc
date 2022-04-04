@@ -96,7 +96,7 @@ int main()
     else
     {
         array[0]++;
-        array[1]++;
+        array[2]++;
     }
 
     fprintf(stdout, "P1: program 1 was spawn %d times, program 2 - %d times, total - %d times\n", array[0], array[1], array[2]);
