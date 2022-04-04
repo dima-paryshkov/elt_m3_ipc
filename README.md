@@ -51,7 +51,7 @@ Launch:
 
 ##### Exercise 3
 
-Both programs can create semophore if it doesn't exist. Program 1 execute P(0, 1). Program 1 execute A(0, 1). 
+Both programs can create semophore if it doesn't exist. Program 1 execute P(0, 1). Program 2 execute A(0, 1).s
 
 Compile:
 
@@ -61,8 +61,13 @@ or
 
 	gcc sem1a.c -o sem1a
 	gcc sem1b.c -o sem1b
+    gcc sem1dl.c -o sem1dl
 
 Launch:
     
     ./sem1a
     ./sem1b
+
+Delete semaphore from sem1:
+
+    ./sem1dl
