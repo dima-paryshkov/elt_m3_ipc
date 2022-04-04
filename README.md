@@ -71,3 +71,30 @@ Launch:
 Delete semaphore from sem1:
 
     ./sem1dl
+
+#### Part 3 - semaphore + shared memory
+
+##### Exercise 4
+
+This exersise is combination of exersise 1 and exersise 3
+
+Compile:
+
+    make shmSem1
+
+or 
+
+	gcc shmSem1a.c -o shmSem1a
+	gcc shmSem1b.c -o shmSem1b
+	gcc shmSem1dl.c -o shmSem1dl
+
+Launch:
+    
+    ./shmSem1a
+    ./shmSem1b
+
+Delete semaphore and shared mamory from shmSem1:
+
+    ./shmSem1dl
+
+[You can find more information here](http://asu.cs.nstu.ru/~evgen/)
