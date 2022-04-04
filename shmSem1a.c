@@ -46,14 +46,27 @@ int main()
             return 3;
         }
     }
+    else
+    {
+        printf("Init\n");
+        sembuf.sem_num = 0;
+        sembuf.sem_op = 1;
+        sembuf.sem_flg = 0;
+
+        if (semop(semid, &sembuf, 1) == -1)
+        {
+            perror("Error: Can't initial - execute operation A(0, 1) for semaphore");
+            return 3;
+        }
+    }
 
     sembuf.sem_num = 0;
-    sembuf.sem_op = 1;
+    sembuf.sem_op = -1;
     sembuf.sem_flg = 0;
 
     if (semop(semid, &sembuf, 1) == -1)
     {
-        perror("Error: Can't execute operation A(0, 1) for semaphore");
+        perror("Error: Can't execute operation P(0, 1) for semaphore");
         return 4;
     }
 
@@ -81,7 +94,7 @@ int main()
         }
     }
 
-    if ((int*)(array = (int*)shmat(shmid, NULL, 0)) == (int*)(-1))
+    if ((int *)(array = (int *)shmat(shmid, NULL, 0)) == (int *)(-1))
     {
         perror("Error: Can't attach shared memory");
         return 7;
@@ -105,11 +118,11 @@ int main()
 
     if (semop(semid, &sembuf, 1) == -1)
     {
-        perror("Error: Can't execute operation P(0, 1) for semaphore");
+        perror("Error: Can't execute operation A(0, 1) for semaphore");
         return 8;
     }
 
-    if (shmdt((void*)array) == -1)
+    if (shmdt((void *)array) == -1)
     {
         perror("Error: Can't detach shared memory");
         return 9;
